@@ -9,12 +9,14 @@ import { InputTextModule, ButtonModule, DataTableModule, SharedModule } from 'pr
 import { AppComponent } from './app.component';
 import { RequestsComponent } from './requests/requests.component';
 import { ConfigComponent } from './config/config.component';
+import { NewRequestComponent } from './newrequest/newrequest.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         RequestsComponent,
-        ConfigComponent
+        ConfigComponent,
+        NewRequestComponent
     ],
     imports: [
         BrowserModule,
@@ -23,12 +25,16 @@ import { ConfigComponent } from './config/config.component';
         HttpModule,
         InputTextModule,
         ButtonModule,
-        DataTableModule, 
+        DataTableModule,
         SharedModule,
         RouterModule.forRoot([
             {
                 path: '',
                 component: RequestsComponent
+            },
+            {
+                path: 'newrequest',
+                component: NewRequestComponent
             },
             {
                 path: 'config',
