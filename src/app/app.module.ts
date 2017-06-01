@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { InputTextModule, ButtonModule } from 'primeng/primeng';
+import { InputTextModule, ButtonModule, DataTableModule, SharedModule } from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
 import { RequestsComponent } from './requests/requests.component';
@@ -23,6 +23,8 @@ import { ConfigComponent } from './config/config.component';
         HttpModule,
         InputTextModule,
         ButtonModule,
+        DataTableModule, 
+        SharedModule,
         RouterModule.forRoot([
             {
                 path: '',
