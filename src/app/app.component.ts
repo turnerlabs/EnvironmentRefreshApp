@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    activeMenuId: string;
+    activeMenuId = 'requests-menu';
     themesVisible = false;
     mobileMenuActive = false;
 

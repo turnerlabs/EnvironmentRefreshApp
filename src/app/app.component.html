@@ -1,44 +1,21 @@
 <div class="layout-wrapper">
     <div id="layout-sidebar" [ngClass]="{'active':mobileMenuActive}">
         <span class="layout-logo">
-			EnvironmentRefresh
-            <!--<a href="#" class="sidebar-logo" [routerLink]="['/']">
-                <img alt="logo" src="showcase/resources/images/primeng-sidebar.svg" />
-            </a>
-            <a href="#" id="menu-button-mobile" (click)="toggleMenu($event)" [ngClass]="{'active':mobileMenuActive}">
-                <img alt="logo" src="showcase/resources/images/menuicon.svg"/>
-            </a>-->
+			Environment Refresh
         </span>
 
-        <a id="menu_input" #inputmenutitle [class.active-menuitem]="inputmenutitle.id == activeMenuId" (click)="activeMenuId = inputmenutitle.id">
+        <a id="requests-menu" #requestsmenutitle [routerLink]="['/']" [class.active-menuitem]="requestsmenutitle.id == activeMenuId" (click)="activeMenuId = requestsmenutitle.id">
             <span>Requests</span>
         </a>
-        <div [ngClass]="{submenushow: (inputmenutitle.id == activeMenuId), 'submenuhide': (inputmenutitle.id != activeMenuId)}">
-            <!--<a [routerLink]="['/autocomplete']" (click)="mobileMenuActive = false">&#9679; AutoComplete</a>
-            <a [routerLink]="['/calendar']" (click)="mobileMenuActive = false">&#9679; Calendar</a>-->
-        </div>
 
-        <a id="button_menutitle" #buttonmenutitle [class.active-menuitem]="buttonmenutitle.id == activeMenuId" (click)="activeMenuId = buttonmenutitle.id">
+        <a id="config-menu" #configmenutitle [routerLink]="['/config']" [class.active-menuitem]="configmenutitle.id == activeMenuId" (click)="activeMenuId = configmenutitle.id">
             <span>Config</span>
         </a>
 
     </div>
 
     <div id="layout-content">
-        <div id="topbar">
-            <a href="#" id="menu-button" (click)="toggleMenu($event)" [ngClass]="{'active':mobileMenuActive}">
-                <img alt="logo" src="showcase/resources/images/menuicon.svg"/>
-            </a>
-
-            <div class="mobile-logo">
-                <img src="showcase/resources/images/primeng-sidebar.svg" />
-            </div>
-        </div>
-
-        <div>
-			<p>I am here</p>
-            <!--<router-outlet></router-outlet>-->
-        </div>
+        <router-outlet></router-outlet>
     </div>
 </div>
 

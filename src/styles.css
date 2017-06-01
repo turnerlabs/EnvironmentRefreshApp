@@ -25,12 +25,14 @@ body {
 }
 
 .layout-logo {
-    height: 65px;
+    height: 25px;
     display: block;
     padding: 15px 0 17px 0;
     z-index: 997;
     background-color: #313b3f;
     text-align: center;
+    color: white;
+    font-size: 18pt;
 }
 
 .layout-logo img {
@@ -161,6 +163,7 @@ body {
 
 #topbar {
     background-color: #1976D2;
+    color: white;
     box-sizing: border-box;
     display: block;
     border-bottom: solid 1px #dde3e6;
