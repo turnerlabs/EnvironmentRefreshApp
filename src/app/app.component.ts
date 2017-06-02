@@ -7,11 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     activeMenuId = 'requests-menu';
-    themesVisible = false;
-    mobileMenuActive = false;
-
-    toggleMenu(e) {
-        this.mobileMenuActive = !this.mobileMenuActive;
-        e.preventDefault();
-    }
 }

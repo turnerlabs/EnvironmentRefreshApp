@@ -4,7 +4,7 @@
     <button pButton icon="fa-check" class="topbar-button" iconPos="left" type="button" label="New Request" [routerLink]="['newrequest']"></button>
   </div>
 
-  <div fxFlex="100" class="content-section">
+  <div fxFlex="grow" class="content-section">
     <p-dataTable [value]="requests">
       <p-column field="environment" header="Environment"></p-column>
       <p-column field="status" header="Status"></p-column>
