@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { RequestsComponent } from './requests/requests.component';
 import { ConfigComponent } from './config/config.component';
 import { NewRequestComponent } from './newrequest/newrequest.component';
+import { RefreshRequestService } from './requests/refresh-request.service';
 
 @NgModule({
     declarations: [
@@ -45,7 +46,9 @@ import { NewRequestComponent } from './newrequest/newrequest.component';
 
         ])
     ],
-    providers: [],
+    providers: [
+        RefreshRequestService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
