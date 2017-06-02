@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataTableModule, SharedModule } from 'primeng/primeng';
-import { RefreshRequest } from './refreshrequest';
+import { RefreshRequest } from './refresh-request';
 import { RefreshRequestService } from './refresh-request.service';
 
 @Component({

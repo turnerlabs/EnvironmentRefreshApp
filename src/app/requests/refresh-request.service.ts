@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { RefreshRequest } from './refreshrequest'
+import { RefreshRequest } from './refresh-request'
 
 @Injectable()
 export class RefreshRequestService {
