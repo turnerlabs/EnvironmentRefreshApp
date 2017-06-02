@@ -1,21 +1,25 @@
-<div class="layout-wrapper">
-    <div id="layout-sidebar" [ngClass]="{'active':mobileMenuActive}">
-        <span class="layout-logo">
-			Environment Refresh
-        </span>
-
-        <a id="requests-menu" #requestsmenutitle [routerLink]="['/']" [class.active-menuitem]="requestsmenutitle.id == activeMenuId" (click)="activeMenuId = requestsmenutitle.id">
-            <span>Requests</span>
+<div fxLayout="row" fxFlexFill>
+  <div fxFlex="200px" [ngClass]="{'active':mobileMenuActive}">
+    <div fxLayout="column">
+      <div fxFlex="80px" class="sidebar-logo">
+        Environment Refresh
+      </div>
+      <div fxFlex="50px" class="sidebar-menu">
+        <a id="requests-menu" #requestsmenutitle [routerLink]="['/']" [class.active-menuitem]="requestsmenutitle.id == activeMenuId"
+          (click)="activeMenuId = requestsmenutitle.id">
+        <span>Requests</span>
         </a>
-
-        <a id="config-menu" #configmenutitle [routerLink]="['/config']" [class.active-menuitem]="configmenutitle.id == activeMenuId" (click)="activeMenuId = configmenutitle.id">
-            <span>Config</span>
+      </div>
+      <div fxFlex="50px" class="sidebar-menu">
+        <a id="config-menu" #configmenutitle [routerLink]="['/config']" [class.active-menuitem]="configmenutitle.id == activeMenuId"
+          (click)="activeMenuId = configmenutitle.id">
+        <span>Config</span>
         </a>
-
+      </div>
     </div>
+  </div>
 
-    <div id="layout-content">
-        <router-outlet></router-outlet>
-    </div>
+  <div fxFlex fxFlexFill>
+    <router-outlet></router-outlet>
+  </div>
 </div>
-

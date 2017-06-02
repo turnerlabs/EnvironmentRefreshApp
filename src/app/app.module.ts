@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { InputTextModule, ButtonModule, DataTableModule, SharedModule } from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
@@ -23,6 +24,7 @@ import { NewRequestComponent } from './newrequest/newrequest.component';
         BrowserAnimationsModule,
         FormsModule,
         HttpModule,
+        FlexLayoutModule,
         InputTextModule,
         ButtonModule,
         DataTableModule,
