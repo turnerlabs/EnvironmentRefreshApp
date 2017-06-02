@@ -1,8 +1,10 @@
-<div id="topbar">
-    New Request
-    <button pButton icon="fa-check" class="topbar-button" iconPos="left" type="button" label="Submit"></button>
-</div>
+<div fxLayout="column">
+  <div fxFlex="60px" class="topbar">
+    <h1>New Requests</h1>
+    <button pButton icon="fa-check" class="topbar-button" iconPos="left" type="button" label="Schedule Request" [routerLink]="['newrequest']"></button>
+  </div>
 
-<div class="content-section">
-    Hey new Request!
+  <div fxFlex="100" class="content-section">
+      <h2>New Request</h2>
+  </div>
 </div>
