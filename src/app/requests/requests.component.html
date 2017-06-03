@@ -6,11 +6,11 @@
 
   <div fxFlex="grow" class="content-section">
     <p-dataTable [value]="requests">
-      <p-column field="environment" header="Environment"></p-column>
+      <p-column field="environmentId" header="Environment"></p-column>
       <p-column field="status" header="Status"></p-column>
-      <p-column field="requestedBy" header="Requested By"></p-column>
-      <p-column field="requestedOn" header="Requested On"></p-column>
-      <p-column field="scheduledOn" header="Scheduled On"></p-column>
+      <p-column field="requestor" header="Requested By"></p-column>
+      <p-column field="scheduleDate" header="Scheduled On"></p-column>
+      <p-column field="completionDate" header="Completed On"></p-column>
       <p-column field="databases" header="Databases"></p-column>
     </p-dataTable>
   </div>
