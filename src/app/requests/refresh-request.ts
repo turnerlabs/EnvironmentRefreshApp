@@ -3,9 +3,9 @@ export interface RefreshRequest {
     environmentId: string;
     status: string;
     requestor: string;
-    scheduleDate: string;
+    scheduleDate: Date;
     scheduledBy: string;
-    completionDate: string;
+    completionDate: Date;
     totalDuration: string;
     databases?: DatabaseLog[];
     logs?: LogEntry[];
@@ -15,9 +15,9 @@ interface DatabaseLog {
   databaseName: string;
   stage: string;
   size: number;
-  restoreStartTime: string;
-  stageCompleteTime: string;
-  restoreCompleteTime: string;
+  restoreStartTime: Date;
+  stageCompleteTime: Date;
+  restoreCompleteTime: Date;
   elapsedTime: string;
   duration: string;
   resource: string;
@@ -27,5 +27,5 @@ export interface LogEntry {
   database: string;
   status: string;
   message: string;
-  logTime: string;
+  logTime: Date;
 }

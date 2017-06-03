@@ -9,8 +9,16 @@
       <p-column field="environmentId" header="Environment"></p-column>
       <p-column field="status" header="Status"></p-column>
       <p-column field="requestor" header="Requested By"></p-column>
-      <p-column field="scheduleDate" header="Scheduled On"></p-column>
-      <p-column field="completionDate" header="Completed On"></p-column>
+      <p-column field="scheduleDate" header="Scheduled On">
+        <ng-template let-col let-request="rowData" pTemplate="body">
+            <span>{{request[col.field] | date:"MM/dd/yy hh:mm:ss a"}}</span>
+        </ng-template>
+      </p-column>
+      <p-column field="completionDate" header="Completed On">
+        <ng-template let-col let-request="rowData" pTemplate="body">
+            <span>{{request[col.field] | date:"MM/dd/yy hh:mm:ss a"}}</span>
+        </ng-template>
+      </p-column>
       <p-column field="databases" header="Databases"></p-column>
     </p-dataTable>
   </div>
