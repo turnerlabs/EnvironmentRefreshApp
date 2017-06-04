@@ -1,6 +1,6 @@
 export interface RefreshRequest {
     id: string;
-    environmentId: string;
+    environment: string;
     status: string;
     requestor: string;
     scheduleDate: Date;

@@ -1,5 +1,5 @@
 export interface Config {
-  environmentId: string;
+  environment: string;
   serverInstance: string;
   defaultDataFilePath: string;
   defaultLogFilePath: string;

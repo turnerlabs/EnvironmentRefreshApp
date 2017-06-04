@@ -5,7 +5,11 @@
 
   <div fxFlex="grow" class="content-section">
     <p-dataTable [value]="environments">
-      <p-column field="environment" header="Environment"></p-column>
+      <p-column field="environment" header="Environment">
+        <ng-template let-col let-environment="rowData" pTemplate="body">
+          <a [routerLink]="['/config', environment.environment]">{{environment.environment}}</a>
+        </ng-template>
+      </p-column>
       <p-column field="description" header="Description"></p-column>
     </p-dataTable>
   </div>

@@ -2,7 +2,7 @@ import { Config } from './config'
 
 export const ConfigData: Config[] = [
   {
-    'environmentId': 'MAIN',
+    'environment': 'MAIN',
     'serverInstance': 'MAINSQL',
     'defaultDataFilePath': 'D:\\MSSQL\\DATA',
     'defaultLogFilePath': 'L:\\MSSQL\\DATA',
@@ -32,7 +32,7 @@ export const ConfigData: Config[] = [
     ]
   },
   {
-    'environmentId': 'PROD',
+    'environment': 'PROD',
     'serverInstance': 'PRODSQL',
     'defaultDataFilePath': 'D:\\MSSQL\\DATA',
     'defaultLogFilePath': 'L:\\MSSQL\\DATA',

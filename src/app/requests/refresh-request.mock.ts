@@ -3,7 +3,7 @@ import { RefreshRequest } from './refresh-request'
 export const RefreshRequestsListData: RefreshRequest[] = [
   {
     'id': '5931f3cced6ffb2540cff1eb',
-    'environmentId': 'MAIN',
+    'environment': 'MAIN',
     'status': 'Complete',
     'requestor': 'DOMAIN\\user',
     'scheduleDate': new Date('2017-06-02T19:26:05.261-04:00'),
@@ -13,7 +13,7 @@ export const RefreshRequestsListData: RefreshRequest[] = [
   },
   {
     'id': '5931f3cced6ffb2540cff1eb',
-    'environmentId': 'ASQA',
+    'environment': 'ASQA',
     'status': 'Complete',
     'requestor': 'DOMAIN\\user',
     'scheduleDate': new Date('2017-06-02T19:26:05.261-04:00'),
@@ -27,7 +27,7 @@ export const RefreshRequestsListData: RefreshRequest[] = [
 export const RefreshRequestsData: RefreshRequest[] = [
   {
     'id': '5931f3cced6ffb2540cff1eb',
-    'environmentId': 'MAIN',
+    'environment': 'MAIN',
     'status': 'Complete',
     'requestor': 'DOMAIN\\user',
     'scheduleDate': new Date('2017-06-02T19:26:05.261-04:00'),
