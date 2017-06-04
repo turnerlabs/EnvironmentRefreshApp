@@ -20,13 +20,6 @@ import { ConfigComponent } from './config/config.component';
 import { ConfigEnvironmentComponent } from './config/config-environment.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    RequestsComponent,
-    ConfigComponent,
-    NewRequestComponent,
-    ConfigEnvironmentComponent
-  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -38,6 +31,13 @@ import { ConfigEnvironmentComponent } from './config/config-environment.componen
     DataTableModule,
     SharedModule,
     AppRoutingModule
+  ],
+  declarations: [
+    AppComponent,
+    RequestsComponent,
+    ConfigComponent,
+    NewRequestComponent,
+    ConfigEnvironmentComponent
   ],
   providers: [
     EnvironmentService,

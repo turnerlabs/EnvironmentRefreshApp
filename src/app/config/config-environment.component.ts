@@ -11,7 +11,7 @@ import { ConfigService } from './config.service'
   styleUrls: ['./config-environment.component.css']
 })
 export class ConfigEnvironmentComponent implements OnInit {
-  config: Config;
+  config: Config = <Config>{};
 
   constructor(
     private route: ActivatedRoute,
@@ -21,8 +21,7 @@ export class ConfigEnvironmentComponent implements OnInit {
 
   ngOnInit() {
     this.route.params
-    .switchMap((params: Params) => this.configService.getConfig(params['environment']))
-    .subscribe(config => this.config = config);
+      .switchMap((params: Params) => this.configService.getConfig(params['environment']))
+      .subscribe(config => this.config = config);
   }
-
 }
