@@ -11,7 +11,7 @@ export interface RefreshRequest {
     logs?: LogEntry[];
 }
 
-interface DatabaseLog {
+export interface DatabaseLog {
   databaseName: string;
   stage: string;
   size: number;

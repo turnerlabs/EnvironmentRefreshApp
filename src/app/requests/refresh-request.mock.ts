@@ -79,7 +79,18 @@ export const RefreshRequestsData: RefreshRequest[] = [
     'completionDate': moment().add(-162, 'minutes').toDate(),
     'databases': [
       {
-        'databaseName': 'Foundation',
+        'databaseName': 'Clients',
+        'stage': 'Complete',
+        'size': 1544,
+        'restoreStartTime': new Date('2017-06-02T19:26:27.089-04:00'),
+        'stageCompleteTime': new Date('2017-06-02T19:26:54.137-04:00'),
+        'restoreCompleteTime': new Date('2017-06-02T19:26:54.137-04:00'),
+        'elapsedTime': '00:00:27.0480000',
+        'duration': '27 seconds and 48ms',
+        'resource': 'http://localhost/api/EnvironmentRefreshConfigurations/MAIN/Foundation'
+      },
+      {
+        'databaseName': 'Orders',
         'stage': 'Complete',
         'size': 1544,
         'restoreStartTime': new Date('2017-06-02T19:26:27.089-04:00'),
@@ -98,31 +109,61 @@ export const RefreshRequestsData: RefreshRequest[] = [
         'logTime': new Date('2017-06-02T19:26:21.574-04:00')
       },
       {
-        'database': 'Foundation',
+        'database': 'Clients',
         'status': 'Preparing',
         'message': 'Setting database offline',
         'logTime': new Date('2017-06-02T19:26:27.089-04:00')
       },
       {
-        'database': 'Foundation',
+        'database': 'Clients',
         'status': 'Restoring',
         'message': 'Restoring database over existing database',
         'logTime': new Date('2017-06-02T19:26:29.449-04:00')
       },
       {
-        'database': 'Foundation',
+        'database': 'Clients',
         'status': 'Restoring',
         'message': 'Setting recovery model and database options',
         'logTime': new Date('2017-06-02T19:26:51.543-04:00')
       },
       {
-        'database': 'Foundation',
+        'database': 'Clients',
         'status': 'PostRefresh',
         'message': 'Repairing broken logins',
         'logTime': new Date('2017-06-02T19:26:53.637-04:00')
       },
       {
-        'database': 'Foundation',
+        'database': 'Clients',
+        'status': 'Complete',
+        'message': null,
+        'logTime': new Date('2017-06-02T19:26:54.137-04:00')
+      },
+      {
+        'database': 'Orders',
+        'status': 'Preparing',
+        'message': 'Setting database offline',
+        'logTime': new Date('2017-06-02T19:26:27.089-04:00')
+      },
+      {
+        'database': 'Orders',
+        'status': 'Restoring',
+        'message': 'Restoring database over existing database',
+        'logTime': new Date('2017-06-02T19:26:29.449-04:00')
+      },
+      {
+        'database': 'Orders',
+        'status': 'Restoring',
+        'message': 'Setting recovery model and database options',
+        'logTime': new Date('2017-06-02T19:26:51.543-04:00')
+      },
+      {
+        'database': 'Orders',
+        'status': 'PostRefresh',
+        'message': 'Repairing broken logins',
+        'logTime': new Date('2017-06-02T19:26:53.637-04:00')
+      },
+      {
+        'database': 'Orders',
         'status': 'Complete',
         'message': null,
         'logTime': new Date('2017-06-02T19:26:54.137-04:00')

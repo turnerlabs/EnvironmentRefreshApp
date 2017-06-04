@@ -18,6 +18,7 @@ import { RequestsComponent } from './requests/requests.component';
 import { NewRequestComponent } from './newrequest/newrequest.component';
 import { ConfigComponent } from './config/config.component';
 import { ConfigEnvironmentComponent } from './config/config-environment.component';
+import { DatabaseNamesPipe } from './requests/database-names.pipe';
 
 @NgModule({
   imports: [
@@ -37,7 +38,8 @@ import { ConfigEnvironmentComponent } from './config/config-environment.componen
     RequestsComponent,
     ConfigComponent,
     NewRequestComponent,
-    ConfigEnvironmentComponent
+    ConfigEnvironmentComponent,
+    DatabaseNamesPipe
   ],
   providers: [
     EnvironmentService,

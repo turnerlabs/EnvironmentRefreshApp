@@ -10,16 +10,20 @@
       <p-column field="status" header="Status"></p-column>
       <p-column field="requestor" header="Requested By"></p-column>
       <p-column field="scheduleDate" header="Scheduled On">
-        <ng-template let-col let-request="rowData" pTemplate="body">
-            <span>{{request[col.field] | date:"MM/dd/yy hh:mm a"}}</span>
+        <ng-template let-request="rowData" pTemplate="body">
+            <span>{{request.scheduleDate | date:"MM/dd/yy hh:mm a"}}</span>
         </ng-template>
       </p-column>
       <p-column field="completionDate" header="Completed On">
-        <ng-template let-col let-request="rowData" pTemplate="body">
-            <span>{{request[col.field] | date:"MM/dd/yy hh:mm a"}}</span>
+        <ng-template let-request="rowData" pTemplate="body">
+            <span>{{request.completionDate | date:"MM/dd/yy hh:mm a"}}</span>
         </ng-template>
       </p-column>
-      <p-column field="databases" header="Databases"></p-column>
+      <p-column field="databases" header="Databases">
+        <ng-template let-request="rowData" pTemplate="body">
+            <span>{{request.databases | databaseListPipe }}</span>
+        </ng-template>
+      </p-column>
     </p-dataTable>
   </div>
 </div>
