@@ -4,6 +4,9 @@
   </div>
 
   <div fxFlex="grow" class="content-section">
-      <h2>Config</h2>
+    <p-dataTable [value]="environments">
+      <p-column field="environment" header="Environment"></p-column>
+      <p-column field="description" header="Description"></p-column>
+    </p-dataTable>
   </div>
 </div>

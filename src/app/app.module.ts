@@ -8,11 +8,13 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { InputTextModule, ButtonModule, DataTableModule, SharedModule } from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
-import { RefreshRequestService } from './requests/refresh-request.service';
 import { RequestsComponent } from './requests/requests.component';
 import { NewRequestComponent } from './newrequest/newrequest.component';
-import { ConfigService } from './config/config.service';
 import { ConfigComponent } from './config/config.component';
+
+import { RefreshRequestService } from './requests/refresh-request.service';
+import { EnvironmentService } from './environment/environment.service';
+import { ConfigService } from './config/config.service';
 
 @NgModule({
     declarations: [
@@ -48,8 +50,9 @@ import { ConfigComponent } from './config/config.component';
         ])
     ],
     providers: [
-        RefreshRequestService,
-        ConfigService
+        EnvironmentService,
+        ConfigService,
+        RefreshRequestService
     ],
     bootstrap: [AppComponent]
 })
