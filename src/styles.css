@@ -37,6 +37,7 @@ body {
     box-sizing: border-box;
     border-bottom: solid 1px #404a4e;
     background-color: #313b3f;
+    text-decoration: none;
 }
 
 .sidebar-menu.active-menuitem {
@@ -57,18 +58,14 @@ body {
     transition: all 0.5s ease;
 }
 
-.sidebar-menu > a {
-    text-decoration: none;
-}
-
-.sidebar-menu > a i {
+.sidebar-menu > i {
     color: #9ba5ac;
     font-size: 16px;
     float: left;
     display: block;
 }
 
-.sidebar-menu > a span {
+.sidebar-menu > span {
     color: #9ba5ac;
     font-size: 16px;
     margin: 0px 0px 0px 30px;
@@ -106,7 +103,7 @@ body {
 
 .content-section:first-of-type > div > span {
     line-height: 1.5em;
-} 
+}
 
 .content-section h2 {
     margin-top: 0;

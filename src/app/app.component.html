@@ -4,18 +4,14 @@
       <div fxFlex="80px" class="sidebar-logo">
         Environment Refresh
       </div>
-      <div id="requests-menu" #requestsmenutitle fxFlex="50px" class="sidebar-menu" [class.active-menuitem]="requestsmenutitle.id == activeMenuId">
-        <a [routerLink]="['/']" (click)="activeMenuId = requestsmenutitle.id">
+      <a [routerLink]="['/']" (click)="activeMenuId = requestsmenutitle.id" id="requests-menu" #requestsmenutitle fxFlex="50px" class="sidebar-menu" [class.active-menuitem]="requestsmenutitle.id == activeMenuId">
         <i class="fa fa-list" aria-hidden="true"></i>
         <span>Requests</span>
-        </a>
-      </div>
-      <div id="config-menu" #configmenutitle fxFlex="50px" class="sidebar-menu" [class.active-menuitem]="configmenutitle.id == activeMenuId">
-        <a [routerLink]="['/config']" (click)="activeMenuId = configmenutitle.id">
+      </a>
+      <a [routerLink]="['/config']" (click)="activeMenuId = configmenutitle.id" id="config-menu" #configmenutitle fxFlex="50px" class="sidebar-menu" [class.active-menuitem]="configmenutitle.id == activeMenuId">
         <i class="fa fa-cog" aria-hidden="true"></i>
         <span>Config</span>
-        </a>
-      </div>
+      </a>
     </div>
   </div>
 
