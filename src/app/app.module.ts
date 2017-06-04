@@ -15,7 +15,7 @@ import { EnvironmentService } from './environment/environment.service';
 import { ConfigService } from './config/config.service';
 
 import { RequestsComponent } from './requests/requests.component';
-import { NewRequestComponent } from './newrequest/newrequest.component';
+import { NewRequestComponent } from './requests/new-request.component';
 import { ConfigComponent } from './config/config.component';
 import { ConfigEnvironmentComponent } from './config/config-environment.component';
 import { DatabaseNamesPipe } from './requests/database-names.pipe';

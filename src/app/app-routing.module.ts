@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { RequestsComponent } from './requests/requests.component';
-import { NewRequestComponent } from './newrequest/newrequest.component';
+import { NewRequestComponent } from './requests/new-request.component';
 import { ConfigComponent } from './config/config.component';
 import { ConfigEnvironmentComponent } from './config/config-environment.component';
 
@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'requests',  component: RequestsComponent },
   { path: 'config',  component: ConfigComponent },
   { path: 'config/:environment', component: ConfigEnvironmentComponent },
-  { path: 'newrequest',     component: NewRequestComponent }
+  { path: 'requests/_new',     component: NewRequestComponent }
 ];
 
 @NgModule({
