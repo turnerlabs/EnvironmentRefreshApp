@@ -21,7 +21,7 @@
       </p-column>
       <p-column field="databases" header="Databases">
         <ng-template let-request="rowData" pTemplate="body">
-            <span>{{request.databases | databaseListPipe }}</span>
+            <span>{{request.databases | databaseNamesPipe }}</span>
         </ng-template>
       </p-column>
     </p-dataTable>
