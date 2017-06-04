@@ -1,14 +1,14 @@
 <div fxLayout="row" fxLayoutAlign="start stretch">
   <div fxFlex="200px" class="sidebar">
     <div fxLayout="column">
-      <div fxFlex="80px" class="sidebar-logo">
+      <div class="sidebar-logo">
         Environment Refresh
       </div>
-      <a [routerLink]="['/']" (click)="activeMenuId = requestsmenutitle.id" id="requests-menu" #requestsmenutitle fxFlex="50px" class="sidebar-menu" [class.active-menuitem]="requestsmenutitle.id == activeMenuId">
+      <a class="sidebar-menu" [routerLink]="['/requests']" routerLinkActive="active-menuitem">
         <i class="fa fa-list" aria-hidden="true"></i>
         <span>Requests</span>
       </a>
-      <a [routerLink]="['/config']" (click)="activeMenuId = configmenutitle.id" id="config-menu" #configmenutitle fxFlex="50px" class="sidebar-menu" [class.active-menuitem]="configmenutitle.id == activeMenuId">
+      <a class="sidebar-menu" [routerLink]="['/config']" routerLinkActive="active-menuitem">
         <i class="fa fa-cog" aria-hidden="true"></i>
         <span>Config</span>
       </a>
