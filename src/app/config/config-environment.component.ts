@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import 'rxjs/add/operator/switchMap';
-import { Config } from './config'
+import { Config, Database } from './config'
 import { ConfigService } from './config.service'
 
 @Component({
@@ -12,6 +12,12 @@ import { ConfigService } from './config.service'
 })
 export class ConfigEnvironmentComponent implements OnInit {
   config: Config = <Config>{};
+  addingNewDatabase = false;
+  unusedDatabases = [
+    { label: 'NewDatabase1', value: 'NewDatabase1' },
+    { label: 'NewDatabase2', value: 'NewDatabase2' }
+  ];
+  newDatabase: Database = <Database>{};
 
   constructor(
     private route: ActivatedRoute,
@@ -23,5 +29,17 @@ export class ConfigEnvironmentComponent implements OnInit {
     this.route.params
       .switchMap((params: Params) => this.configService.getConfig(params['environment']))
       .subscribe(config => this.config = config);
+  }
+
+  addDatabase() {
+    this.addingNewDatabase = true;
+  }
+
+  saveDatabase() {
+    this.addingNewDatabase = false;
+  }
+
+  saveConfig() {
+
   }
 }

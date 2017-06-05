@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { InputTextModule, ButtonModule, DataTableModule, SharedModule } from 'primeng/primeng';
+import { InputTextModule, ButtonModule, DropdownModule, DataTableModule, PanelModule, SharedModule } from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -29,7 +29,9 @@ import { DatabaseNamesPipe } from './requests/database-names.pipe';
     FlexLayoutModule,
     InputTextModule,
     ButtonModule,
+    DropdownModule,
     DataTableModule,
+    PanelModule,
     SharedModule,
     AppRoutingModule
   ],
