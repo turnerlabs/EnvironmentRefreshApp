@@ -13,8 +13,11 @@
     </p-panel>
   </div>
 
-  <div fxFlex="grow" class="content-section" [hidden]="!addingNewDatabase">
-    <p-panel header="Database">
+  <div fxFlex="grow" class="content-section">
+    <div [hidden]="addingNewDatabase">
+    <button pButton icon="fa-plus" iconPos="left" type="button" label="Add Database" (click)="addDatabase()"></button>
+    </div>
+    <p-panel header="Database" [hidden]="!addingNewDatabase">
       <label for="databaseName">Database Name</label>
       <p-dropdown id="databaseName" [options]="unusedDatabases" [(ngModel)]="newDatabase.databaseName" placeholder="Select a Database"></p-dropdown>
 
@@ -27,8 +30,6 @@
   </div>
 
   <div fxFlex="grow" class="content-section">
-    <button pButton icon="fa-plus" iconPos="left" type="button" label="Add Database" (click)="addDatabase()" [hidden]="addingNewDatabase"></button>
-    {{ addingNewDatabase }}
     <p-dataTable [value]="config.databases">
       <p-column field="databaseName" header="Database Name"></p-column>
       <p-column field="overrideDataFilePath" header="Override Datafile Path"></p-column>
