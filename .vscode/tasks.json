@@ -8,8 +8,8 @@
     "isBackground": true,
     "args": [
       "--kill-others",
-      "\"ng serve --proxy-config proxy.config.json\"",
-      "\"dotnet watch run\""
+      "\"dotnet watch run\"",
+      "\"ng serve --proxy-config proxy.config.json\""
     ]
   }]
 }

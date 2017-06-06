@@ -5,6 +5,8 @@ https://dzone.com/articles/aspnet-core-and-angular-2-using-cli-and-visual-stu
 
 https://medium.com/@levifuller/building-an-angular-application-with-asp-net-core-in-visual-studio-2017-visualized-f4b163830eaa
 
+https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.0.
 

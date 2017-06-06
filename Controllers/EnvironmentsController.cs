@@ -11,11 +11,18 @@ namespace EnvironmentRefreshApp.Controllers
     [Route("api/[controller]")]
     public class EnvironmentsController : Controller
     {
+        private readonly EnvironmentRefreshContext _context;
+
+        public EnvironmentsController(EnvironmentRefreshContext context)
+        {
+            _context = context;
+        }
+
         // GET: api/values
         [HttpGet]
         public IEnumerable<EnvironmentDto> Get()
         {
-            return EnvironmentDto.Environments;
+            return _context.Environments;
         }
     }
 }
