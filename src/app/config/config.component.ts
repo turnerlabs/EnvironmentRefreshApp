@@ -15,7 +15,8 @@ export class ConfigComponent implements OnInit {
     constructor(private environmentService: EnvironmentService) { }
 
     ngOnInit() {
-        this.environmentService.getEnvironments().then(environments => this.environments = environments);
+        this.environmentService
+        .getEnvironments()
+        .then(environments => this.environments = environments);
     }
-
 }
