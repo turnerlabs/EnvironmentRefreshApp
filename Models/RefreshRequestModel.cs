@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-public class RefreshRequest {
+public class RefreshRequestModel {
     public string Id { get; set; }
     public string Environment { get; set; }
     public string Status { get; set; }

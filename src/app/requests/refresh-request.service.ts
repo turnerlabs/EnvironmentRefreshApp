@@ -1,15 +1,23 @@
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
 import { RefreshRequest } from './refresh-request'
-import { RefreshRequestsData } from './refresh-request.mock';
+import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class RefreshRequestService {
+    constructor(
+        private http: Http
+    ) { }
+
     getRequests(): Promise<RefreshRequest[]> {
-        return Promise.resolve(RefreshRequestsData);
+        return this.http.get('/api/refreshrequest')
+            .toPromise()
+            .then(response => response.json() as RefreshRequest[]);
     }
 
       getRequest(id: string): Promise<RefreshRequest> {
-        return Promise.resolve(RefreshRequestsData.find(x => x.id === id));
+        return this.http.get(`/api/refreshrequest/${id}`)
+            .toPromise()
+            .then(response => response.json() as RefreshRequest);
     }
-
 }
