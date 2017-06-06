@@ -10,7 +10,7 @@ export class EnvironmentService {
     ) { }
 
     getEnvironments(): Promise<Environment[]> {
-        return this.http.get('/api/environments')
+        return this.http.get('/api/environment')
             .toPromise()
             .then(response => response.json() as Environment[]);
     }

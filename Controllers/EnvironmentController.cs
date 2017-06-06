@@ -9,18 +9,18 @@ using EnvironmentRefreshApp.Models;
 namespace EnvironmentRefreshApp.Controllers
 {
     [Route("api/[controller]")]
-    public class EnvironmentsController : Controller
+    public class EnvironmentController : Controller
     {
         private readonly EnvironmentRefreshContext _context;
 
-        public EnvironmentsController(EnvironmentRefreshContext context)
+        public EnvironmentController(EnvironmentRefreshContext context)
         {
             _context = context;
         }
 
         // GET: api/values
         [HttpGet]
-        public IEnumerable<EnvironmentDto> Get()
+        public IEnumerable<EnvironmentModel> Get()
         {
             return _context.Environments;
         }

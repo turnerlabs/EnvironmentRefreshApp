@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace EnvironmentRefreshApp.Models
 {
-    public class EnvironmentDto
+    public class EnvironmentModel
     {
         [Key]
         public string Environment { get; set; }

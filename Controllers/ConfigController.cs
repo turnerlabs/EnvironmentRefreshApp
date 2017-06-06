@@ -10,25 +10,25 @@ using EnvironmentRefreshApp.Models;
 namespace EnvironmentRefreshApp.Controllers
 {
     [Route("api/[controller]")]
-    public class ConfigsController : Controller
+    public class ConfigController : Controller
     {
         private readonly EnvironmentRefreshContext _context;
 
-        public ConfigsController(EnvironmentRefreshContext context)
+        public ConfigController(EnvironmentRefreshContext context)
         {
             _context = context;
         }
 
         // GET: api/values
         [HttpGet]
-        public IEnumerable<ConfigDto> Get()
+        public IEnumerable<ConfigModel> Get()
         {
             return _context.Configs;
         }
 
         // GET: api/values
         [HttpGet("{environment}", Name = "GetConfig")]
-        public ConfigDto Get(string environment)
+        public ConfigModel Get(string environment)
         {
             return _context.Configs
                 .Include(x => x.Databases)

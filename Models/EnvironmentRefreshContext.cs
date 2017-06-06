@@ -11,15 +11,15 @@ namespace EnvironmentRefreshApp.Models
         {
         }
 
-        public DbSet<EnvironmentDto> Environments { get; set; }
-        public DbSet<ConfigDto> Configs { get; set; }
+        public DbSet<EnvironmentModel> Environments { get; set; }
+        public DbSet<ConfigModel> Configs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<DatabaseDto>()
+            modelBuilder.Entity<DatabaseModel>()
                 .HasKey(x => new { x.Environment, x.DatabaseName });
 
-            modelBuilder.Entity<ConfigDto>()
+            modelBuilder.Entity<ConfigModel>()
             .HasMany(x => x.Databases)
             .WithOne();
         }
@@ -39,17 +39,17 @@ namespace EnvironmentRefreshApp.Models
 
         private void LoadEnvironments()
         {
-            this.Environments.Add(new EnvironmentDto
+            this.Environments.Add(new EnvironmentModel
             {
                 Environment = "MAIN",
                 Description = "Main development"
             });
-            this.Environments.Add(new EnvironmentDto
+            this.Environments.Add(new EnvironmentModel
             {
                 Environment = "POST",
                 Description = "PROD patch testing"
             });
-            this.Environments.Add(new EnvironmentDto
+            this.Environments.Add(new EnvironmentModel
             {
                 Environment = "PROD",
                 Description = "Production"
@@ -58,14 +58,14 @@ namespace EnvironmentRefreshApp.Models
         }
         private void LoadConfigs()
         {
-            this.Configs.Add(new ConfigDto
+            this.Configs.Add(new ConfigModel
             {
                 Environment = "MAIN",
                 ServerInstance = "MAINSQL",
                 DefaultDataFilePath = "D:\\MSSQL\\DATA",
                 DefaultLogFilePath = "L:\\MSSQL\\DATA",
-                Databases = new List<DatabaseDto>(new[] {
-                    new DatabaseDto {
+                Databases = new List<DatabaseModel>(new[] {
+                    new DatabaseModel {
                         DatabaseName = "Customers",
                         OverrideDataFilePath = null,
                         OverrideLogFilePath = null,
@@ -76,7 +76,7 @@ namespace EnvironmentRefreshApp.Models
                         RestoreDuration = 6208,
                         RestoreDurationDescription = "1 hour and 43 minutes"
                     },
-                    new DatabaseDto {
+                    new DatabaseModel {
                         DatabaseName = "Orders",
                         OverrideDataFilePath = null,
                         OverrideLogFilePath = null,
@@ -89,14 +89,14 @@ namespace EnvironmentRefreshApp.Models
                     }
                 })
             });
-            this.Configs.Add(new ConfigDto
+            this.Configs.Add(new ConfigModel
             {
                 Environment = "QA",
                 ServerInstance = "QASQL",
                 DefaultDataFilePath = "D:\\MSSQL\\DATA",
                 DefaultLogFilePath = "L:\\MSSQL\\DATA",
-                Databases = new List<DatabaseDto>(new[] {
-                    new DatabaseDto {
+                Databases = new List<DatabaseModel>(new[] {
+                    new DatabaseModel {
                         Environment = "QA",
                         DatabaseName = "Customers",
                         OverrideDataFilePath = null,
@@ -108,7 +108,7 @@ namespace EnvironmentRefreshApp.Models
                         RestoreDuration = 6208,
                         RestoreDurationDescription = "1 hour and 43 minutes"
                       },
-                    new DatabaseDto {
+                    new DatabaseModel {
                         Environment = "QA",
                         DatabaseName = "Orders",
                         OverrideDataFilePath = null,
@@ -122,14 +122,14 @@ namespace EnvironmentRefreshApp.Models
                     }
                 })
             });
-            this.Configs.Add(new ConfigDto
+            this.Configs.Add(new ConfigModel
             {
                 Environment = "PROD",
                 ServerInstance = "PRODSQL",
                 DefaultDataFilePath = "D:\\MSSQL\\DATA",
                 DefaultLogFilePath = "L:\\MSSQL\\DATA",
-                Databases = new List<DatabaseDto>(new[] {
-                    new DatabaseDto {
+                Databases = new List<DatabaseModel>(new[] {
+                    new DatabaseModel {
                         Environment = "PROD",
                         DatabaseName = "Customers",
                         OverrideDataFilePath = null,
@@ -141,7 +141,7 @@ namespace EnvironmentRefreshApp.Models
                         RestoreDuration = 6208,
                         RestoreDurationDescription = "1 hour and 43 minutes"
                     },
-                    new DatabaseDto {
+                    new DatabaseModel {
                         Environment = "PROD",
                         DatabaseName = "Orders",
                         OverrideDataFilePath = null,

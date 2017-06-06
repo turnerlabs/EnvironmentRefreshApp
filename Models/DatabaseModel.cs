@@ -1,7 +1,7 @@
 
 namespace EnvironmentRefreshApp.Models
 {
-    public class DatabaseDto
+    public class DatabaseModel
     {
         public string Environment { get; set; }
         public string DatabaseName { get; set; }
@@ -14,6 +14,6 @@ namespace EnvironmentRefreshApp.Models
         public int? RestoreDuration { get; set; }
         public string RestoreDurationDescription { get; set; }
 
-        //public ConfigDto Config { get; set; }
+        //public ConfigModel Config { get; set; }
     }
 }

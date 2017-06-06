@@ -10,7 +10,7 @@ export class ConfigService {
     ) { }
 
     getConfig(environment: string): Promise<Config> {
-        return this.http.get(`/api/configs/${environment}`)
+        return this.http.get(`/api/config/${environment}`)
             .toPromise()
             .then(response => response.json() as Config);
     }
