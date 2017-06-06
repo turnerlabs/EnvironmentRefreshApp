@@ -19,10 +19,9 @@ namespace EnvironmentRefreshApp.Models
             modelBuilder.Entity<DatabaseDto>()
                 .HasKey(x => new { x.Environment, x.DatabaseName });
 
-            modelBuilder.Entity<DatabaseDto>()
-                .HasOne(x => x.Config)
-                .WithMany(x => x.Databases)
-                .HasForeignKey(x => x.Environment);
+            modelBuilder.Entity<ConfigDto>()
+            .HasMany(x => x.Databases)
+            .WithOne();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -66,31 +65,29 @@ namespace EnvironmentRefreshApp.Models
                 DefaultDataFilePath = "D:\\MSSQL\\DATA",
                 DefaultLogFilePath = "L:\\MSSQL\\DATA",
                 Databases = new List<DatabaseDto>(new[] {
-                  new DatabaseDto {
-                      Environment = "MAIN",
-                    DatabaseName = "Customers",
-                    OverrideDataFilePath = null,
-                    OverrideLogFilePath = null,
-                    ImpactsInsight = false,
-                    Replicate = false,
-                    Shrink = false,
-                    Size = 235264,
-                    RestoreDuration = 6208,
-                    RestoreDurationDescription = "1 hour and 43 minutes"
-                  },
-                  new DatabaseDto {
-                      Environment = "MAIN",
-                    DatabaseName = "Orders",
-                    OverrideDataFilePath = null,
-                    OverrideLogFilePath = null,
-                    ImpactsInsight = false,
-                    Replicate = false,
-                    Shrink = false,
-                    Size = 235264,
-                    RestoreDuration = 6208,
-                    RestoreDurationDescription = "1 hour and 43 minutes"
-                  }
-              })
+                    new DatabaseDto {
+                        DatabaseName = "Customers",
+                        OverrideDataFilePath = null,
+                        OverrideLogFilePath = null,
+                        ImpactsInsight = false,
+                        Replicate = false,
+                        Shrink = false,
+                        Size = 235264,
+                        RestoreDuration = 6208,
+                        RestoreDurationDescription = "1 hour and 43 minutes"
+                    },
+                    new DatabaseDto {
+                        DatabaseName = "Orders",
+                        OverrideDataFilePath = null,
+                        OverrideLogFilePath = null,
+                        ImpactsInsight = false,
+                        Replicate = false,
+                        Shrink = false,
+                        Size = 235264,
+                        RestoreDuration = 6208,
+                        RestoreDurationDescription = "1 hour and 43 minutes"
+                    }
+                })
             });
             this.Configs.Add(new ConfigDto
             {
@@ -99,31 +96,31 @@ namespace EnvironmentRefreshApp.Models
                 DefaultDataFilePath = "D:\\MSSQL\\DATA",
                 DefaultLogFilePath = "L:\\MSSQL\\DATA",
                 Databases = new List<DatabaseDto>(new[] {
-                  new DatabaseDto {
-                      Environment = "QA",
-                    DatabaseName = "Customers",
-                    OverrideDataFilePath = null,
-                    OverrideLogFilePath = null,
-                    ImpactsInsight = false,
-                    Replicate = false,
-                    Shrink = false,
-                    Size = 235264,
-                    RestoreDuration = 6208,
-                    RestoreDurationDescription = "1 hour and 43 minutes"
-                  },
-                  new DatabaseDto {
-                      Environment = "QA",
-                    DatabaseName = "Orders",
-                    OverrideDataFilePath = null,
-                    OverrideLogFilePath = null,
-                    ImpactsInsight = false,
-                    Replicate = false,
-                    Shrink = false,
-                    Size = 235264,
-                    RestoreDuration = 6208,
-                    RestoreDurationDescription = "1 hour and 43 minutes"
-                  }
-              })
+                    new DatabaseDto {
+                        Environment = "QA",
+                        DatabaseName = "Customers",
+                        OverrideDataFilePath = null,
+                        OverrideLogFilePath = null,
+                        ImpactsInsight = false,
+                        Replicate = false,
+                        Shrink = false,
+                        Size = 235264,
+                        RestoreDuration = 6208,
+                        RestoreDurationDescription = "1 hour and 43 minutes"
+                      },
+                    new DatabaseDto {
+                        Environment = "QA",
+                        DatabaseName = "Orders",
+                        OverrideDataFilePath = null,
+                        OverrideLogFilePath = null,
+                        ImpactsInsight = false,
+                        Replicate = false,
+                        Shrink = false,
+                        Size = 235264,
+                        RestoreDuration = 6208,
+                        RestoreDurationDescription = "1 hour and 43 minutes"
+                    }
+                })
             });
             this.Configs.Add(new ConfigDto
             {
@@ -132,31 +129,31 @@ namespace EnvironmentRefreshApp.Models
                 DefaultDataFilePath = "D:\\MSSQL\\DATA",
                 DefaultLogFilePath = "L:\\MSSQL\\DATA",
                 Databases = new List<DatabaseDto>(new[] {
-                  new DatabaseDto {
-                      Environment = "PROD",
-                    DatabaseName = "Customers",
-                    OverrideDataFilePath = null,
-                    OverrideLogFilePath = null,
-                    ImpactsInsight = false,
-                    Replicate = false,
-                    Shrink = false,
-                    Size = 235264,
-                    RestoreDuration = 6208,
-                    RestoreDurationDescription = "1 hour and 43 minutes"
-                  },
-                  new DatabaseDto {
-                      Environment = "PROD",
-                    DatabaseName = "Orders",
-                    OverrideDataFilePath = null,
-                    OverrideLogFilePath = null,
-                    ImpactsInsight = false,
-                    Replicate = false,
-                    Shrink = false,
-                    Size = 235264,
-                    RestoreDuration = 6208,
-                    RestoreDurationDescription = "1 hour and 43 minutes"
-                  }
-              })
+                    new DatabaseDto {
+                        Environment = "PROD",
+                        DatabaseName = "Customers",
+                        OverrideDataFilePath = null,
+                        OverrideLogFilePath = null,
+                        ImpactsInsight = false,
+                        Replicate = false,
+                        Shrink = false,
+                        Size = 235264,
+                        RestoreDuration = 6208,
+                        RestoreDurationDescription = "1 hour and 43 minutes"
+                    },
+                    new DatabaseDto {
+                        Environment = "PROD",
+                        DatabaseName = "Orders",
+                        OverrideDataFilePath = null,
+                        OverrideLogFilePath = null,
+                        ImpactsInsight = false,
+                        Replicate = false,
+                        Shrink = false,
+                        Size = 235264,
+                        RestoreDuration = 6208,
+                        RestoreDurationDescription = "1 hour and 43 minutes"
+                    }
+                })
             });
             this.SaveChanges();
         }

@@ -12,20 +12,20 @@ export interface RefreshRequest {
 }
 
 export interface DatabaseLog {
-  databaseName: string;
-  stage: string;
-  size: number;
-  restoreStartTime: Date;
-  stageCompleteTime: Date;
-  restoreCompleteTime: Date;
-  elapsedTime: string;
-  duration: string;
-  resource: string;
+    databaseName: string;
+    stage: string;
+    size: number;
+    restoreStartTime: Date;
+    stageCompleteTime: Date;
+    restoreCompleteTime: Date;
+    elapsedTime: string;
+    duration: string;
+    resource: string;
 }
 
 export interface LogEntry {
-  database: string;
-  status: string;
-  message: string;
-  logTime: Date;
+    database: string;
+    status: string;
+    message: string;
+    logTime: Date;
 }

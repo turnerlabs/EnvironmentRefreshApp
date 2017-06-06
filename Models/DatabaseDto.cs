@@ -14,6 +14,6 @@ namespace EnvironmentRefreshApp.Models
         public int? RestoreDuration { get; set; }
         public string RestoreDurationDescription { get; set; }
 
-        public ConfigDto Config { get; set; }
+        //public ConfigDto Config { get; set; }
     }
 }
