@@ -11,12 +11,17 @@ import { EnvironmentService } from '../environment/environment.service';
 export class ConfigComponent implements OnInit {
 
     environments: Environment[];
+    loading = false;
 
     constructor(private environmentService: EnvironmentService) { }
 
     ngOnInit() {
+      this.loading = true;
         this.environmentService
         .getEnvironments()
-        .then(environments => this.environments = environments);
+        .then(environments => {
+          this.environments = environments
+          this.loading = false;
+        });
     }
 }

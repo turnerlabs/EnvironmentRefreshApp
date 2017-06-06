@@ -1,10 +1,17 @@
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
 import { Config } from './config'
-import { ConfigData } from './config.mock';
+import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class ConfigService {
+    constructor(
+        private http: Http
+    ) { }
+
     getConfig(environment: string): Promise<Config> {
-        return Promise.resolve(ConfigData.find(x => x.environment === environment));
+        return this.http.get(`/api/configs/${environment}`)
+            .toPromise()
+            .then(response => response.json() as Config);
     }
 }

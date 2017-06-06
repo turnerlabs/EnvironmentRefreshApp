@@ -4,9 +4,9 @@
   </div>
 
   <div fxFlex="grow" class="content-section">
-    <p-dataTable [value]="environments">
+    <p-dataTable [value]="environments" [loading]="loading">
       <p-column field="environment" header="Environment">
-        <ng-template let-col let-environment="rowData" pTemplate="body">
+        <ng-template let-environment="rowData" pTemplate="body">
           <a [routerLink]="['/config', environment.environment]">{{environment.environment}}</a>
         </ng-template>
       </p-column>

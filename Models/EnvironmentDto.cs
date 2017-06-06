@@ -6,6 +6,9 @@ namespace EnvironmentRefreshApp.Models
     {
         public static List<EnvironmentDto> Environments;
 
+        public string Environment { get; set; }
+        public string Description { get; set; }
+
         static EnvironmentDto()
         {
             EnvironmentDto.Environments = new List<EnvironmentDto>(
@@ -19,13 +22,15 @@ namespace EnvironmentRefreshApp.Models
                         Description = "Quality Assurance testing"
                     },
                     new EnvironmentDto {
+                        Environment = "POST",
+                        Description = "PROD patch testing"
+                    },
+                    new EnvironmentDto {
                         Environment = "PROD",
                         Description = "Production"
                     }
                 }
             );
         }
-        public string Environment { get; set; }
-        public string Description { get; set; }
     }
 }
