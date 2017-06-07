@@ -1,42 +1,57 @@
 <div fxLayout="column">
-  <div fxFlex="60px" class="topbar">
-    <h1>{{config.environment}} Config</h1>
-    <button pButton icon="fa-floppy-o" class="topbar-button" iconPos="left" type="button" label="Save Config"></button>
-  </div>
-
-  <div fxFlex="grow" class="content-section">
-    <p-panel header="Default Paths">
-      <label for="defaultDataFilePath">Default Datafile Path</label>
-      <input id="defaultDataFilePath" type="text" size="30" pInputText [(ngModel)]="config.defaultDataFilePath">
-      <label for="defaultLogFilePath">Default Logfile Path</label>
-      <input id="defaultLogFilePath" type="text" size="30" pInputText [(ngModel)]="config.defaultLogFilePath">
-    </p-panel>
-  </div>
-
-  <div fxFlex="grow" class="content-section">
-    <div [hidden]="addingNewDatabase">
-    <button pButton icon="fa-plus" iconPos="left" type="button" label="Add Database" (click)="addDatabase()"></button>
+    <div fxFlex="60px" class="topbar">
+        <h1>{{config.environment}} Config</h1>
+        <button pButton icon="fa-floppy-o" class="topbar-button" iconPos="left" type="button" label="Save Config"></button>
     </div>
-    <p-panel header="Database" [hidden]="!addingNewDatabase">
-      <label for="databaseName">Database Name</label>
-      <p-dropdown id="databaseName" [options]="unusedDatabases" [(ngModel)]="newDatabase.databaseName" placeholder="Select a Database"></p-dropdown>
 
-      <label for="overrideDataFilePath">Override Datafile Path</label>
-      <input id="overrideDataFilePath" type="text" size="30" pInputText [(ngModel)]="newDatabase.overrideDataFilePath">
-      <label for="overrideLogFilePath">Override Logfile Path</label>
-      <input id="overrideLogFilePath" type="text" size="30" pInputText [(ngModel)]="newDatabase.overrideLogFilePath">
-      <button pButton icon="fa-plus" iconPos="left" type="button" label="Save Database" (click)="saveDatabase()"></button>
-    </p-panel>
-  </div>
+    <div fxFlex="grow" class="content-section">
+        <p-panel header="Default Paths">
+            <div fxLayout="row">
+                <div fxLayout="column" fxFlex="33" class="form-box">
+                    <label for="defaultDataFilePath">Default Datafile Path</label>
+                    <input id="defaultDataFilePath" type="text" size="30" pInputText [(ngModel)]="config.defaultDataFilePath">
+                </div>
+                <div fxLayout="column" fxFlex="33" class="form-box">
+                    <label for="defaultLogFilePath">Default Logfile Path</label>
+                    <input id="defaultLogFilePath" type="text" size="30" pInputText [(ngModel)]="config.defaultLogFilePath">
+                </div>
+            </div>
+        </p-panel>
+    </div>
 
-  <div fxFlex="grow" class="content-section">
-    <p-dataTable [value]="config.databases">
-      <p-column field="databaseName" header="Database Name"></p-column>
-      <p-column field="overrideDataFilePath" header="Override Datafile Path"></p-column>
-      <p-column field="overrideLogFilePath" header="Override Logfile Path"></p-column>
-      <p-column field="impactsInsight" header="Impacts Insight"></p-column>
-      <p-column field="replicate" header="Replicate"></p-column>
-      <p-column field="shrink" header="Shrink"></p-column>
-    </p-dataTable>
-  </div>
+    <div fxFlex="grow" class="content-section">
+        <div [hidden]="addingNewDatabase">
+            <button pButton icon="fa-plus" iconPos="left" type="button" label="Add Database" (click)="addDatabase()"></button>
+        </div>
+        <p-panel header="Add Database" [hidden]="!addingNewDatabase">
+            <div fxLayout="row">
+                <div fxLayout="column" fxFlex="33" class="form-box">
+                    <label for="databaseName">Database Name</label>
+                    <p-dropdown id="databaseName" [options]="unusedDatabases" [(ngModel)]="newDatabase.databaseName" placeholder="Select a Database"></p-dropdown>
+                </div>
+                <div fxLayout="column" fxFlex="33" class="form-box">
+                    <label for="overrideDataFilePath">Override Datafile Path</label>
+                    <input id="overrideDataFilePath" type="text" size="30" pInputText [(ngModel)]="newDatabase.overrideDataFilePath">
+                </div>
+                <div fxLayout="column" fxFlex="33" class="form-box">
+                    <label for="overrideLogFilePath">Override Logfile Path</label>
+                    <input id="overrideLogFilePath" type="text" size="30" pInputText [(ngModel)]="newDatabase.overrideLogFilePath">
+                </div>
+            </div>
+            <div fxLayout="row">
+                <button pButton icon="fa-plus" iconPos="left" type="button" label="Save Database" (click)="saveDatabase()"></button>
+            </div>
+        </p-panel>
+    </div>
+
+    <div fxFlex="grow" class="content-section">
+        <p-dataTable [value]="config.databases">
+            <p-column field="databaseName" header="Database Name"></p-column>
+            <p-column field="overrideDataFilePath" header="Override Datafile Path"></p-column>
+            <p-column field="overrideLogFilePath" header="Override Logfile Path"></p-column>
+            <p-column field="impactsInsight" header="Impacts Insight"></p-column>
+            <p-column field="replicate" header="Replicate"></p-column>
+            <p-column field="shrink" header="Shrink"></p-column>
+        </p-dataTable>
+    </div>
 </div>

@@ -48,4 +48,10 @@ body {
     margin-top: 0;
 }
 
+.form-box {
+    padding: 10px;
+}
 
+.form-box label {
+    font-weight: bold;
+}
