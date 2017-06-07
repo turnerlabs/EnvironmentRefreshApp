@@ -21,6 +21,7 @@ body {
     border-bottom: solid 1px #dde3e6;
     padding: 15px;
     overflow: hidden;
+    margin-bottom: 30px;
 }
 
 .topbar > h1 {
@@ -34,8 +35,12 @@ body {
     margin-left: 5px;
 }
 
+.content {
+    background-color: #f5f7f8;
+}
+
 .content-section {
-    padding: 30px;
+    padding: 0px 30px 30px 30px;
     overflow: hidden;
     background-color: #f5f7f8;
 }

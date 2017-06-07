@@ -20,10 +20,16 @@
     </div>
 
     <div fxFlex="grow" class="content-section">
-        <div [hidden]="addingNewDatabase">
-            <button pButton icon="fa-plus" iconPos="left" type="button" label="Add Database" (click)="addDatabase()"></button>
-        </div>
-        <p-panel header="Add Database" [hidden]="!addingNewDatabase">
+        <p-panel [collapsed]="!addingNewDatabase">
+            <p-header>
+                <div [hidden]="addingNewDatabase">
+                    <button pButton icon="fa-plus" iconPos="left" type="button" label="Add Database" (click)="addDatabase()"></button>
+                </div>
+                <div [hidden]="!addingNewDatabase">
+                    Adding Database
+                </div>
+
+            </p-header>
             <div fxLayout="row">
                 <div fxLayout="column" fxFlex="33" class="form-box">
                     <label for="databaseName">Database Name</label>
