@@ -1,25 +1,41 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { InputTextModule, ButtonModule, DropdownModule, DataTableModule, PanelModule, SharedModule } from 'primeng/primeng';
+
 import { NewRequestComponent } from './new-request.component';
 
-describe('NewrequestComponent', () => {
-  let component: NewRequestComponent;
-  let fixture: ComponentFixture<NewRequestComponent>;
+import { RouterLinkStubDirective, RouterOutletStubComponent } from '../../../testing/router-stubs';
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ NewRequestComponent ]
-    })
-    .compileComponents();
-  }));
+describe('NewRequestComponent', () => {
+    let component: NewRequestComponent;
+    let fixture: ComponentFixture<NewRequestComponent>;
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(NewRequestComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            imports: [
+                FormsModule,
+                PanelModule,
+                DropdownModule,
+                DataTableModule,
+                NoopAnimationsModule
+            ],
+            declarations: [
+                NewRequestComponent,
+                RouterLinkStubDirective,
+                RouterOutletStubComponent
+            ]
+        }).compileComponents();
+    }));
 
-  it('should be created', () => {
-    expect(component).toBeTruthy();
-  });
+    beforeEach(() => {
+        fixture = TestBed.createComponent(NewRequestComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
+
+    it('should be created', () => {
+        expect(component).toBeTruthy();
+    });
 });

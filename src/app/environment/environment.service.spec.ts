@@ -1,15 +1,23 @@
 import { TestBed, inject } from '@angular/core/testing';
 
+import { Http } from '@angular/http';
+
 import { EnvironmentService } from './environment.service';
 
 describe('EnvironmentService', () => {
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      providers: [EnvironmentService]
-    });
-  });
+    const httpStub = {
+    };
 
-  it('should be created', inject([EnvironmentService], (service: EnvironmentService) => {
-    expect(service).toBeTruthy();
-  }));
+    beforeEach(() => {
+        TestBed.configureTestingModule({
+            providers: [
+                EnvironmentService,
+                { provide: Http, useValue: httpStub }
+            ]
+        });
+    });
+
+    it('should be created', inject([EnvironmentService], (service: EnvironmentService) => {
+        expect(service).toBeTruthy();
+    }));
 });

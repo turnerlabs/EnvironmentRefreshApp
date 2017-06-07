@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { Location } from '@angular/common';
 import 'rxjs/add/operator/switchMap';
 import { Config, Database } from './config'
 import { ConfigService } from './config.service'
@@ -21,7 +20,6 @@ export class ConfigEnvironmentComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private location: Location,
     private configService: ConfigService
   ) { }
 

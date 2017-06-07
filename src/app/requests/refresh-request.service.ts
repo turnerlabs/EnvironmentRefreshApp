@@ -15,7 +15,7 @@ export class RefreshRequestService {
             .then(response => response.json() as RefreshRequest[]);
     }
 
-      getRequest(id: string): Promise<RefreshRequest> {
+    getRequest(id: string): Promise<RefreshRequest> {
         return this.http.get(`/api/refreshrequest/${id}`)
             .toPromise()
             .then(response => response.json() as RefreshRequest);
