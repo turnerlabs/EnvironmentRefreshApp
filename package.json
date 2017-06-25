@@ -5,9 +5,9 @@
   "scripts": {
     "ng": "ng",
     "install": "dotnet restore",
-    "start": "run-p \"dotnet-serve angular-serve\"",
-    "dotnet-serve": "dotnet watch run",
-    "angular-serve": "ng serve --proxy-config proxy.config.json",
+    "start": "concurrently \"dotnet watch run\" \"ng serve --progress false --proxy-config proxy.config.json\"",
+    "start:dotnet": "dotnet watch run",
+    "start:angular": "ng serve --proxy-config proxy.config.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
