@@ -31,15 +31,6 @@ Once the angular build is complete (webpack: Compiled successfully), you can vie
 
 [http://localhost:4200](http://localhost:4200)
 
-# Instructions
-
-## Application Description
-
-## Feature: Submit a new Request
-## Feature: Improve the application 
-
-
-
 # References
 Some of the ideas for structuring this project come from these links.
 
