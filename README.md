@@ -48,5 +48,3 @@ Some of the ideas for structuring this project come from these links.
 [How to build an Angular Application with ASP.NET Core in Visual Studio 2017, visualized](https://medium.com/@levifuller/building-an-angular-application-with-asp-net-core-in-visual-studio-2017-visualized-f4b163830eaa)
 
 [Create a web API with ASP.NET Core MVC and Visual Studio for Windows](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api)
-
-
