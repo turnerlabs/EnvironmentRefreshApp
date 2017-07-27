@@ -31,6 +31,16 @@ Once the angular build is complete (webpack: Compiled successfully), you can vie
 
 [http://localhost:4200](http://localhost:4200)
 
+# Instructions
+
+Fork this project into your Github account.
+
+Complete the feature to allow a user to submit a new request.
+
+Add an additional feature of your own design that you think will improve the program.
+
+When complete let us know, with the link to your repository, and we will review your updates.
+
 # References
 Some of the ideas for structuring this project come from these links.
 
