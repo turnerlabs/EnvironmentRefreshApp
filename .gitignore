@@ -4,8 +4,11 @@
 /dist
 /tmp
 /out-tsc
+/server/obj
+/server/bin
 
 # dependencies
+/client/node_modules
 /node_modules
 
 # IDEs and editors
@@ -40,7 +43,3 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-
-/bin
-/obj
-/wwwroot

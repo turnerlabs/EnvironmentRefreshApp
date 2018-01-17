@@ -1,0 +1,15 @@
+.DS_Store
+.git
+.gitignore
+.vscode
+
+client/node_modules
+
+server/obj
+server/bin
+server/wwwroot
+
+npm-debug.log
+README.md
+docker-compose.yml
+

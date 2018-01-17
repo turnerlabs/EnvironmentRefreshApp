@@ -1,0 +1,71 @@
+<top-menu>
+  <div class="left-group">
+    <h3>Configuration for the {{config.environment}} Environment</h3>
+  </div>
+  <div class="right-group">
+    <button pButton icon="fa-floppy-o" label="Save Config" (click)="saveConfig()"></button>
+  </div>
+</top-menu>
+<div class="content">
+  <div class="content-section">
+    <p-panel header="Default Paths">
+      <form [formGroup]="defaultPathsForm" novalidate>
+        <ul class="form-controls">
+          <li>
+            <label for="defaultDataFilePath">Default Datafile Path</label>
+            <input id="defaultDataFilePath" class="ui-inputtext" formControlName="defaultDataFilePath" type="text" size="30">
+          </li>
+          <li>
+            <label for="defaultLogFilePath">Default Logfile Path</label>
+            <input id="defaultLogFilePath" class="ui-inputtext" formControlName="defaultDataFilePath" type="text" size="30">
+          </li>
+        </ul>
+      </form>
+    </p-panel>
+
+    <div class="content-section">
+      <p-panel [collapsed]="addDatabasePanelCollapsed">
+        <p-header>
+          <div [hidden]="!addDatabasePanelCollapsed">
+            <button pButton icon="fa-plus" iconPos="left" type="button" label="Add Database" (click)="addDatabase()"></button>
+          </div>
+          <div [hidden]="addDatabasePanelCollapsed">
+            New Database
+          </div>
+        </p-header>
+
+        <form [formGroup]="newDatabaseForm" novalidate>
+          <ul class="form-controls">
+            <li>
+              <label for="databaseName">Database Name</label>
+              <p-dropdown id="databaseName" [options]="unusedDatabases" formControlName="databaseName" placeholder="Select a Database"></p-dropdown>
+            </li>
+            <li>
+              <label for="overrideDataFilePath">Override Datafile Path</label>
+              <input id="overrideDataFilePath" type="text" size="30" pInputText formControlName="overrideDataFilePath">
+            </li>
+            <li>
+              <label for="overrideLogFilePath">Override Logfile Path</label>
+              <input id="overrideLogFilePath" type="text" size="30" pInputText formControlName="overrideLogFilePath">
+            </li>
+          </ul>
+          <div>
+            <button pButton icon="fa-plus" iconPos="left" type="button" label="Save Database" (click)="saveDatabase()"></button>
+            <button pButton type="button" label="Cancel" (click)="addDatabasePanelCollapsed = true"></button>
+          </div>
+        </form>
+      </p-panel>
+    </div>
+
+    <div class="content-section">
+      <p-dataTable [value]="config.databases">
+        <p-column field="databaseName" header="Database Name"></p-column>
+        <p-column field="overrideDataFilePath" header="Override Datafile Path"></p-column>
+        <p-column field="overrideLogFilePath" header="Override Logfile Path"></p-column>
+        <p-column field="impactsInsight" header="Impacts Insight"></p-column>
+        <p-column field="replicate" header="Replicate"></p-column>
+        <p-column field="shrink" header="Shrink"></p-column>
+      </p-dataTable>
+    </div>
+  </div>
+</div>

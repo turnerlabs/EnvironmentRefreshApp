@@ -1,0 +1,70 @@
+﻿[
+  {
+    "environment": "DEV",
+    "serverInstance": "DEVSQL",
+    "defaultDataFilePath": "D:\\MSSQL\\DATA",
+    "defaultLogFilePath": "L:\\MSSQL\\DATA",
+    "databases": [
+      {
+        "databaseName": "Invoices",
+        "shrink": true
+      },
+      {
+        "databaseName": "Proposals",
+        "shrink": false,
+        "replicate": true
+      }
+    ]
+  },
+  {
+    "environment": "MAIN",
+    "serverInstance": "MAINSQL",
+    "defaultDataFilePath": "D:\\MSSQL\\DATA",
+    "defaultLogFilePath": "L:\\MSSQL\\DATA",
+    "databases": [
+      {
+        "databaseName": "Invoices",
+        "shrink": true
+      },
+      {
+        "databaseName": "Proposals",
+        "shrink": false,
+        "replicate": true
+      }
+    ]
+  },
+  {
+    "environment": "QA",
+    "serverInstance": "QASQL",
+    "defaultDataFilePath": "D:\\MSSQL\\DATA",
+    "defaultLogFilePath": "L:\\MSSQL\\DATA",
+    "databases": [
+      {
+        "databaseName": "Invoices",
+        "shrink": true
+      },
+      {
+        "databaseName": "Proposals",
+        "shrink": false,
+        "replicate": true
+      }
+    ]
+  },
+  {
+    "environment": "PROD",
+    "serverInstance": "PRODSQL",
+    "defaultDataFilePath": "D:\\MSSQL\\DATA",
+    "defaultLogFilePath": "L:\\MSSQL\\DATA",
+    "databases": [
+      {
+        "databaseName": "Invoices",
+        "shrink": true
+      },
+      {
+        "databaseName": "Proposals",
+        "shrink": false,
+        "replicate": true
+      }
+    ]
+  }
+]

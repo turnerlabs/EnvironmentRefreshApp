@@ -1,0 +1,13 @@
+version: "3"
+services:
+  environmentrefresh:
+    build: .
+    image: environmentrefresh:latest
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./client:/root/client
+      - /root/client/node_modules
+      - ./server:/root/server
+      - /root/server/obj
+      - /root/server/bin

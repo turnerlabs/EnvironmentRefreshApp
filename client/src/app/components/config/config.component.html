@@ -1,0 +1,18 @@
+<top-menu>
+  <div class="left-group">
+    <h3>Configurations</h3>
+  </div>
+  <div class="right-group">
+    <button pButton icon="fa-plus" [routerLink]="['/config/_new']" label="New Configuration"></button>
+  </div>
+</top-menu>
+<div class="content">
+  <p-dataTable [value]="environments" dataKey="environment">
+    <p-column field="environment" header="Environment">
+      <ng-template let-x="rowData" pTemplate="body">
+        <a [routerLink]="['/config', x.environment]">{{x.environment}}</a>
+      </ng-template>
+    </p-column>
+    <p-column field="description" header="description"></p-column>
+  </p-dataTable>
+</div>

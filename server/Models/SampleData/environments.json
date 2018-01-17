@@ -1,0 +1,18 @@
+[
+    {
+        "environment": "DEV",
+        "description": "Development"
+    },
+    {
+        "environment": "MAIN",
+        "description": "Main development"
+    },
+    {
+        "environment": "QA",
+        "description": "Quality Assurance"
+    },
+    {
+        "environment": "PROD",
+        "description": "Production"
+    }
+]
