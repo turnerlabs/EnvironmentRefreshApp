@@ -43,7 +43,7 @@ The first task to to complete a feature to allow a user to submit a new request.
 
 The second task is to add an additional feature of your own design that you think will improve the program.  It can be something that improves how the program works from a technical aspect or a feature that you think the users will like or something else.  It is your choice.
 
-We will be alerted to your changes via GitHub.
+Be sure and push your pull request back to our repository and we will be alerted to your changes via GitHub.
 
 # References
 Some of the ideas for structuring this project come from these links.
