@@ -8,7 +8,7 @@ import { SharedModule, ButtonModule, InputTextModule, DropdownModule, MessageMod
 import { AppRoutingModule } from "./app-routing.module";
 
 import { AppComponent } from "./app.component";
-import { ConfigService, EnvironmentService, RefreshRequestService } from './services';
+import { ConfigService, EnvironmentService, RefreshRequestService, NewRequestService } from './services';
 import { SystemNamesPipe } from './pipes';
 import { NavMenuComponent, ConfigComponent, ConfigEnvironmentComponent, RequestsComponent, NewRequestComponent, TopMenuComponent } from './components';
 
@@ -42,7 +42,8 @@ import { NavMenuComponent, ConfigComponent, ConfigEnvironmentComponent, Requests
   providers: [
     ConfigService,
     EnvironmentService,
-    RefreshRequestService
+    RefreshRequestService,
+    NewRequestService
 ],
   bootstrap: [AppComponent]
 })
