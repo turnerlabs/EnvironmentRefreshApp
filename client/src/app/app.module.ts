@@ -11,6 +11,9 @@ import { AppComponent } from "./app.component";
 import { ConfigService, EnvironmentService, RefreshRequestService } from './services';
 import { SystemNamesPipe } from './pipes';
 import { NavMenuComponent, ConfigComponent, ConfigEnvironmentComponent, RequestsComponent, NewRequestComponent, TopMenuComponent } from './components';
+import { CookieService } from 'ngx-cookie-service';
+import { LoginComponent } from './components/login/login.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,9 @@ import { NavMenuComponent, ConfigComponent, ConfigEnvironmentComponent, Requests
     RequestsComponent,
     NewRequestComponent,
     TopMenuComponent,
-    SystemNamesPipe
+    SystemNamesPipe,
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +47,8 @@ import { NavMenuComponent, ConfigComponent, ConfigEnvironmentComponent, Requests
   providers: [
     ConfigService,
     EnvironmentService,
-    RefreshRequestService
+    RefreshRequestService,
+    CookieService
 ],
   bootstrap: [AppComponent]
 })

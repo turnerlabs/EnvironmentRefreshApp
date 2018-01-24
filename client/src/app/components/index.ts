@@ -4,3 +4,5 @@ export * from './navmenu/navmenu.component';
 export * from './new-request/new-request.component';
 export * from './requests/requests.component';
 export * from './top-menu/top-menu.component';
+export * from './login/login.component';
+export * from './dashboard/dashboard.component'

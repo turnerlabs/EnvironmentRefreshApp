@@ -9,13 +9,20 @@
       </div>
   </div>
   <ul>
+      <li>
+          <h3 class="welcome-message">Welcome {{cookieValue}}</h3>
+      </li>
     <li>
-      <a [routerLinkActive]="['active']" [routerLink]="['/requests']">
+      <a [routerLinkActive]="['active']" [routerLink]="['/dashboard/requests']">
         <i class="fa fa-th-list"></i> Requests</a>
     </li>
     <li>
-      <a [routerLinkActive]="['active']" [routerLink]="['/config']">
+      <a [routerLinkActive]="['active']" [routerLink]="['/dashboard/config']">
         <i class="fa fa-cog"></i> Configurations</a>
     </li>
+    <li>
+        <a [routerLinkActive]="['active']" [routerLink]="['/login']">
+          <i class="fa fa-pinterest"></i> Logout</a>
+      </li>    
   </ul>
 </nav>
