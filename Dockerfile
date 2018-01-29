@@ -7,7 +7,7 @@ ENV ASPNETCORE_URLS http://+:3000
 USER root
 
 RUN npm -g config set user root --quiet
-RUN npm install --quiet --no-progress -g @angular/cli@1.6.0
+RUN npm install --quiet --no-progress -g @angular/cli@1.6.6
 RUN npm cache clean --quiet --force
 
 # Copy and prepare start script
