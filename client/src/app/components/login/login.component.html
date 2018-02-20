@@ -1,0 +1,24 @@
+<div class="content">
+  <div class="content-section">
+    <p-panel header="Login">
+<form [formGroup]="newLoginForm" novalidate>
+    <h4>{{errorMessage}}</h4>
+  <ul class="form-controls">
+        <li>
+      <label for="userName">User Name</label>
+      <input id="userName" type="text" size="30" pInputText formControlName="userName" placeholder="gimudia" >
+    </li>
+    <li>
+      <label for="password">Password</label>
+      <input id="password" type="password" size="30"pInputText formControlName="password" placeholder="gimudia">
+    </li>
+  </ul>
+  <div>
+    <button pButton icon="fa-plus" iconPos="left"  type="button"
+     [disabled]="!newLoginForm.valid" label="Login" (click)="login()"></button>    
+  </div>
+  
+</form>
+    </p-panel>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    height: 100%;
+  }
+  
+  .sidebar {
+    flex: 0 1 200px;
+  }
+  
+  .main {
+    padding-left: 0;
+    flex: 0 1 100%;
+  }
+  
