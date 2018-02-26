@@ -9,7 +9,11 @@
 <div class="content">
   <p-dataTable [value]="requests" [rows]="10" [paginator]="true" dataKey="beltPartNumber">
     <p-column field="environment" header="Environment"></p-column>
-    <p-column field="status" header="Status"></p-column>
+    <p-column field="status" header="Status">
+      <ng-template let-request="rowData" pTemplate="body">
+          <a [routerLink]="['/requests', request.id]">{{request.status}}</a>
+      </ng-template>
+    </p-column>
     <p-column field="requestor" header="Requested By"></p-column>
     <p-column field="scheduleDate" header="Scheduled On"></p-column>
     <p-column field="systems" header="Systems">

@@ -27,18 +27,15 @@ export class RefreshRequestService {
             const systems = Array<RefreshRequestSystem>();
             systems.push(<RefreshRequestSystem>{
                 systemName : 'Folio',
-                databaseName : 'Folio',
-                selected: false
+                databaseName : 'Folio'
             });
             systems.push(<RefreshRequestSystem>{
                 systemName : 'EngageTV',
                 databaseName : 'EngageTV',
-                selected : false
             });
             systems.push(<RefreshRequestSystem>{
                 systemName : 'Crossroad',
-                databaseName : 'Crossroad',
-                selected : false
+                databaseName : 'Crossroad'
             });
             observer.next(systems);
             observer.complete();
