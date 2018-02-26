@@ -22,4 +22,5 @@ export interface RefreshRequestSystem {
     elapsedTime: string;
     duration: string;
     resource: string;
+    selected: boolean;
 }

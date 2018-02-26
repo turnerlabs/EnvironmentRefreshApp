@@ -1,0 +1,52 @@
+<top-menu>
+    <div class="left-group">
+        <h3>Details for request {{request.id}}</h3>
+    </div>
+</top-menu>
+
+<div class="content">
+    <div class="content-section">
+        <p-panel header="Request Details">
+            <ul class="form-controls">
+                <li>
+                    <label for="defaultLogFilePath">Status:</label>
+                    <label for="defaultLogFilePath">
+                        <b>{{request.status}}</b>
+                    </label>
+                </li>
+                <li>
+                    <label for="environment">Environment</label>
+                    <input disabled="true" id="Environment" class="ui-inputtext" type="text" size="30" [value]="request.environment" readonly>
+                </li>
+                <li>
+                    <label for="systems">Systems</label>
+                    <p>{{request.systems | systemNames}}</p>
+                </li>
+                <li>
+                    <label for="environment">Requestor</label>
+                    <input disabled="true" id="requestor" class="ui-inputtext" type="text" size="30" [value]="request.requestor" readonly>
+                </li>
+                <li>
+                    <label for="environment">Scheduler</label>
+                    <input disabled="true" id="scheduler" class="ui-inputtext" type="text" size="30" [value]="request.scheduledBy" readonly>
+                </li>
+                <li>
+                    <label for="environment">Schedule Date</label>
+                    <input disabled="true" id="scheduleDate" class="ui-inputtext" type="text" size="30" [value]="request.scheduleDate | date" readonly>
+                </li>
+                <li>
+                    <label for="environment">Start Date</label>
+                    <input disabled="true" id="startDate" class="ui-inputtext" type="text" size="30" [value]="request.startDate | date" readonly>
+                </li>
+                <li>
+                    <label for="environment">Completion Date</label>
+                    <input disabled="true" id="completeDate" class="ui-inputtext" type="text" size="30" [value]="request.completionDate | date" readonly>
+                </li>
+                <li>
+                    <label for="environment">Log</label>
+                    <textarea disabled="true" id="logs" type="text" size="30" [value]="request.log" readonly></textarea>
+                </li>
+            </ul>
+        </p-panel>
+    </div>
+</div>
