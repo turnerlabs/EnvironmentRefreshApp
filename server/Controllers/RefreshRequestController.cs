@@ -35,5 +35,15 @@ namespace EnvironmentRefresh.Controllers
                 .Include(x => x.Systems)
                 .SingleOrDefaultAsync(x => x.RefreshRequestId == id);
         }
+
+        //POST
+        [HttpPost]
+        public async Task<RefreshRequest> Post([FromBody]RefreshRequest request)
+        {
+            var result = await _context.RefreshRequests.AddAsync(request);
+            await _context.SaveChangesAsync();
+            return result.Entity;
+        }
     }
 }
+
